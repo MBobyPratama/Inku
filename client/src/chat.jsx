@@ -9,10 +9,13 @@ export default function Chat() {
       console.error("Input is empty!");
       return;
     }
+    const prompt =
+      "Kamu adalah Ai yang dibuat dengan tujuan untuk membantu penulis memberikan ide story yang mendalam dan ide karakter Berikut Prompt Nya :" +
+      input;
     try {
       const res = await fetch("/generate", {
         method: "POST",
-        body: JSON.stringify({ prompt: input }),
+        body: JSON.stringify({ prompt: prompt }),
         headers: { "Content-Type": "application/json" },
       });
 
@@ -27,7 +30,7 @@ export default function Chat() {
   return (
     <>
       <h2>Inku</h2>
-      <input type="text" onChange={(e) => setInput(e.target.value)} />
+      <textarea onChange={(e) => setInput(e.target.value)} />
       <button onClick={getData}>Submit</button>
       <ul>
         {data.map((item, index) => (
