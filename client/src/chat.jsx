@@ -3,20 +3,23 @@ import { useState } from "react";
 export default function Chat() {
   const [data, setData] = useState([]);
   const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const getData = async () => {
     if (!input.trim()) {
       console.error("Input is empty!");
       return;
     }
-    const prompt =
-      "Kamu adalah Ai yang dibuat dengan tujuan untuk membantu penulis memberikan ide story yang mendalam dan ide karakter Jika Promtp tidak sesuai dengan tujuan kamu tolong jangan dijawab Ya. Kalau Pengguna memberikan terimakasih atau bertanya tentang kamu, kamu boleh menjawabnya. Berikut Prompt Nya :" +
-      input;
+
+    const prompt = `Kamu adalah Ai yang dibuat dengan tujuan untuk membantu penulis memberikan ide story yang mendalam dan ide karakter. Jika Prompt tidak sesuai dengan tujuan kamu, tolong jangan dijawab. Jika pengguna memberikan terimakasih atau bertanya tentang kamu, kamu boleh menjawabnya. Berikut Prompt-nya: ${input}`;
+
     try {
+      setLoading(true);
       setData((prevData) => [...prevData, input]);
+
       const res = await fetch("/generate", {
         method: "POST",
-        body: JSON.stringify({ prompt: prompt }),
+        body: JSON.stringify({ prompt }),
         headers: { "Content-Type": "application/json" },
       });
 
@@ -27,8 +30,10 @@ export default function Chat() {
       console.error("Error fetching data:", error);
       setData((prevData) => [
         ...prevData,
-        "There was an eror when generating your answer :( Please try again later.",
+        "There was an error generating your answer. Please try again later.",
       ]);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -41,14 +46,18 @@ export default function Chat() {
       />
       <button onClick={getData}>Submit</button>
       <ul className="w-1/2">
-        {data.map((item, index) => (
-          <li
-            key={index}
-            className={index % 2 === 0 ? "text-right" : "text-left"}
-          >
-            {item}
-          </li>
-        ))}
+        {loading ? (
+          <li>Generating Your Answer......</li>
+        ) : (
+          data.map((item, index) => (
+            <li
+              key={index}
+              className={index % 2 === 0 ? "text-right" : "text-left"}
+            >
+              {item}
+            </li>
+          ))
+        )}
       </ul>
     </>
   );
