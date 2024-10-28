@@ -46,18 +46,18 @@ export default function Chat() {
       />
       <button onClick={getData}>Submit</button>
       <ul className="w-1/2">
-        {loading ? (
-          <li>Generating Your Answer......</li>
-        ) : (
-          data.map((item, index) => (
-            <li
-              key={index}
-              className={index % 2 === 0 ? "text-right" : "text-left"}
-            >
-              {item}
-            </li>
-          ))
-        )}
+        {/* Render existing data items */}
+        {data.map((item, index) => (
+          <li
+            key={index}
+            className={index % 2 === 0 ? "text-right" : "text-left"}
+          >
+            {item}
+          </li>
+        ))}
+
+        {/* Show loading indicator at the end, without replacing the list */}
+        {loading && <li className="italic text-gray-500">Loading...</li>}
       </ul>
     </>
   );
