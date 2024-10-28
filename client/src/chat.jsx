@@ -10,7 +10,7 @@ export default function Chat() {
       return;
     }
     const prompt =
-      "Kamu adalah Ai yang dibuat dengan tujuan untuk membantu penulis memberikan ide story yang mendalam dan ide karakter Jika Promtp tidak sesuai dengan tujuan kamu tolong jangan dijawab Ya. Kalau Pengguna memberikan terimakasih, kamu boleh menjawabnya. Berikut Prompt Nya :" +
+      "Kamu adalah Ai yang dibuat dengan tujuan untuk membantu penulis memberikan ide story yang mendalam dan ide karakter Jika Promtp tidak sesuai dengan tujuan kamu tolong jangan dijawab Ya. Kalau Pengguna memberikan terimakasih atau bertanya tentang kamu, kamu boleh menjawabnya. Berikut Prompt Nya :" +
       input;
     try {
       setData((prevData) => [...prevData, input]);
@@ -25,17 +25,29 @@ export default function Chat() {
       setData((prevData) => [...prevData, responseString]);
     } catch (error) {
       console.error("Error fetching data:", error);
+      setData((prevData) => [
+        ...prevData,
+        "There was an eror when generating your answer :( Please try again later.",
+      ]);
     }
   };
 
   return (
     <>
-      <h2>Inku</h2>
-      <textarea onChange={(e) => setInput(e.target.value)} />
+      <h2 className="text-4xl">Inku</h2>
+      <textarea
+        onChange={(e) => setInput(e.target.value)}
+        className="w-[100vw]"
+      />
       <button onClick={getData}>Submit</button>
-      <ul>
+      <ul className="w-1/2">
         {data.map((item, index) => (
-          <li key={index}>{item}</li>
+          <li
+            key={index}
+            className={index % 2 === 0 ? "text-right" : "text-left"}
+          >
+            {item}
+          </li>
         ))}
       </ul>
     </>
