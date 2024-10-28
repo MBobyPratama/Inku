@@ -10,9 +10,10 @@ export default function Chat() {
       return;
     }
     const prompt =
-      "Kamu adalah Ai yang dibuat dengan tujuan untuk membantu penulis memberikan ide story yang mendalam dan ide karakter Berikut Prompt Nya :" +
+      "Kamu adalah Ai yang dibuat dengan tujuan untuk membantu penulis memberikan ide story yang mendalam dan ide karakter Jika Promtp tidak sesuai dengan tujuan kamu tolong jangan dijawab Ya. Kalau Pengguna memberikan terimakasih, kamu boleh menjawabnya. Berikut Prompt Nya :" +
       input;
     try {
+      setData((prevData) => [...prevData, input]);
       const res = await fetch("/generate", {
         method: "POST",
         body: JSON.stringify({ prompt: prompt }),
