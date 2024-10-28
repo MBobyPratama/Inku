@@ -1,22 +1,21 @@
 import express from "express";
 import dotenv from "dotenv";
-import path from "path"; // Import path module
-import { fileURLToPath } from "url"; // Import fileURLToPath from url module
+import path from "path";
+import { fileURLToPath } from "url";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const __filename = fileURLToPath(import.meta.url); // Get the filename
-const __dirname = path.dirname(__filename); // Get the directory name from the filename
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 dotenv.config();
 console.log("API_KEY:", process.env.API_KEY);
 
-const app = express(); // Create Express app
+const app = express();
 const port = 3000;
 
-// Serve static files from the build folder
-app.use(express.static(path.join(__dirname, "../client/dist"))); // Correct path for static files
+app.use(express.static(path.join(__dirname, "../client/dist")));
+app.use(express.json());
 
-// Endpoint to generate content
 const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
