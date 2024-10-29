@@ -3,7 +3,9 @@ import Chat from "./chat";
 function App() {
   return (
     <>
-      <Chat />
+      <div className="flex">
+        <Chat />
+      </div>
     </>
   );
 }

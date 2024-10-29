@@ -1,9 +1,11 @@
-import { useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
+import ReactMarkdown from "react-markdown";
 
 export default function Chat() {
   const [data, setData] = useState([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
+  const listRef = useRef(null);
 
   const getData = async () => {
     if (!input.trim()) {
@@ -11,21 +13,20 @@ export default function Chat() {
       return;
     }
 
-    const prompt = `Kamu adalah Ai yang dibuat dengan tujuan untuk membantu penulis memberikan ide story yang mendalam dan ide karakter. Jika Prompt tidak sesuai dengan tujuan kamu, tolong jangan dijawab. Jika pengguna memberikan terimakasih atau bertanya tentang kamu, kamu boleh menjawabnya. Berikut Prompt-nya: ${input}`;
-
     try {
       setLoading(true);
       setData((prevData) => [...prevData, input]);
 
       const res = await fetch("/generate", {
         method: "POST",
-        body: JSON.stringify({ prompt }),
+        body: JSON.stringify({ prompt: input }),
         headers: { "Content-Type": "application/json" },
       });
 
       const data = await res.json();
       const responseString = data.result.trim();
       setData((prevData) => [...prevData, responseString]);
+      setInput("");
     } catch (error) {
       console.error("Error fetching data:", error);
       setData((prevData) => [
@@ -37,22 +38,28 @@ export default function Chat() {
     }
   };
 
+  useEffect(() => {
+    if (listRef.current) {
+      listRef.current.scrollTop = listRef.current.scrollHeight;
+    }
+  }, [data]);
+
   return (
     <>
       <h2 className="text-4xl">Inku</h2>
       <textarea
+        value={input}
         onChange={(e) => setInput(e.target.value)}
         className="w-[100vw]"
       />
       <button onClick={getData}>Submit</button>
-      <ul className="w-1/2">
-        {/* Render existing data items */}
+      <ul ref={listRef} className="w-1/2 h-screen overflow-auto">
         {data.map((item, index) => (
           <li
             key={index}
             className={index % 2 === 0 ? "text-right" : "text-left"}
           >
-            {item}
+            <ReactMarkdown>{item}</ReactMarkdown>
           </li>
         ))}
 

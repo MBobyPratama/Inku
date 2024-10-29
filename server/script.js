@@ -17,7 +17,13 @@ app.use(express.static(path.join(__dirname, "../client/dist")));
 app.use(express.json());
 
 const genAI = new GoogleGenerativeAI(process.env.API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+const model = genAI.getGenerativeModel({
+  model: "gemini-1.5-flash",
+  generationConfig: {
+    candidateCount: 1,
+    temperature: 2.0,
+  },
+});
 
 app.post("/generate", async (req, res) => {
   const { prompt } = req.body;
