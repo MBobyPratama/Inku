@@ -5,3 +5,6 @@
 textarea {
   all: unset;
 }
+* {
+  overflow: hidden;
+}
