@@ -1,11 +1,8 @@
-import Chat from "./chat";
-
+import Chats from "./pages/Chats";
 function App() {
   return (
     <>
-      <div className="flex">
-        <Chat />
-      </div>
+      <Chats />
     </>
   );
 }
