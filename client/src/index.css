@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Lusitana:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,5 +8,10 @@ textarea {
   all: unset;
 }
 * {
-  overflow: hidden;
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+li {
+  padding: 5px 10px;
 }
