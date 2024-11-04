@@ -4,18 +4,24 @@ import { Link } from "react-router-dom";
 export default function Navbar2() {
   return (
     <nav className="overflow-clip">
-      <ul className="flex flex-col items-center mt-4">
-        <div className="flex flex-col sm:flex-row items-center gap-14 mt-6">
-          <img src={Logo} className="w-[150px]" />
-          <div className="flex gap-12">
+      <ul className="flex flex-col items-center mt-4 mr-4">
+        <div className="flex flex-col sm:flex-row items-center gap-14 sm:gap-24 mt-6">
+          <img src={Logo} className="w-[150px] absolute left-20" />
+          <div className="flex gap-12 sm:gap-24">
             <li>
-              <Link to="/">Home</Link>
+              <Link className="text-[12px] sm:text-xl" to="/">
+                Home
+              </Link>
             </li>
             <li>
-              <a href="">Help & Support</a>
+              <Link to="" className="text-[12px] sm:text-xl">
+                Chat
+              </Link>
             </li>
             <li>
-              <a href="">About Us</a>
+              <Link to="/" className="text-[12px] sm:text-xl">
+                About Us
+              </Link>
             </li>
           </div>
         </div>

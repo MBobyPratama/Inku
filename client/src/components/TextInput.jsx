@@ -14,7 +14,7 @@ export default function TextInput({ input, setInput, getData }) {
             spellCheck="false"
           ></textarea>
           <button onClick={() => getData(input)}>
-            <ArrowRight size={30} />
+            <ArrowRight size={30} color="#333333" />
           </button>
         </div>
       </div>

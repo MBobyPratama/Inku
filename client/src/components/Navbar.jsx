@@ -7,17 +7,17 @@ export default function Navbar() {
       <ul className="flex flex-col items-center mt-4">
         <div className="flex gap-5 sm:gap-24 mt-6">
           <li>
-            <Link to="/" className=" text-[12px] sm:text-xl">
+            <Link to="/" className="text-text text-[12px] sm:text-xl">
               Home
             </Link>
           </li>
           <li>
-            <a href="" className=" text-[12px] sm:text-xl">
-              Help & Support
-            </a>
+            <Link to="chat" className="text-text text-[12px] sm:text-xl">
+              Chat
+            </Link>
           </li>
           <li>
-            <a href="" className=" text-[12px] sm:text-xl">
+            <a href="#about" className="text-text text-[12px] sm:text-xl">
               About Us
             </a>
           </li>

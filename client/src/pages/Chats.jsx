@@ -65,7 +65,7 @@ export default function Chats() {
             <h1 className="text-text text-3xl font-bold mt-6 sm:mt-10 overflow-clip">
               WELCOME TO INKU
             </h1>
-            <p className="text-center mx-5 mb-12 sm:mb-4 overflow-clip">
+            <p className="text-center sm:w-[400px] mx-5 mb-12 sm:mb-4 overflow-clip">
               Inku is a creative AI designed to spark inspiration and guide
               writers in developing their ideas.
             </p>
@@ -73,7 +73,9 @@ export default function Chats() {
         )}
 
         <div>
-          {!isPrompt && <img src={Line} alt="line" className="mb-12" />}
+          {!isPrompt && (
+            <img src={Line} alt="line" className="mb-8 mt-12 ml-1" />
+          )}
           <TextInput input={input} setInput={setInput} getData={getData} />
           {!isPrompt && <PromptExample setInput={setInput} getData={getData} />}
           {isPrompt && (
