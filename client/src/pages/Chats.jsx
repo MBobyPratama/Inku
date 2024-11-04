@@ -74,7 +74,7 @@ export default function Chats() {
 
         <div>
           {!isPrompt && (
-            <img src={Line} alt="line" className="mb-8 mt-12 ml-1" />
+            <img src={Line} alt="line" className="mb-8 mt-12 ml-1 w-screen" />
           )}
           <TextInput input={input} setInput={setInput} getData={getData} />
           {!isPrompt && <PromptExample setInput={setInput} getData={getData} />}
