@@ -2,10 +2,10 @@ import { ArrowRight } from "lucide-react";
 export default function TextInput({ input, setInput, getData }) {
   return (
     <>
-      <div className="w-full p-5">
-        <div className="flex items-center bg-slate-500 w-full p-5 rounded-3xl gap-4">
+      <div className="flex items-center justify-center w-screen p-5">
+        <div className="flex justify-between bg-transparent w-fit p-5 border-2 border-primary rounded-3xl gap-4">
           <textarea
-            className="w-full h-6"
+            className="w-fit sm:w-screen md:w-[600px] h-6 overflow-hidden"
             name="input"
             id="input"
             value={input}

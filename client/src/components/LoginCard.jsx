@@ -3,7 +3,7 @@ import user from "../assets/user.png";
 
 export default function LoginCard() {
   return (
-    <section>
+    <section id="login">
       <div className="flex justify-center mt-4 items-center h-screen">
         <div className="flex flex-col items-center bg-primary w-fit p-6 rounded-xl h-fit">
           <h2 className="text-3xl opacity-0 sm:opacity-100">Login</h2>

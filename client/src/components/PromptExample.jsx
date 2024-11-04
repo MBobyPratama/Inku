@@ -4,10 +4,10 @@ export default function PromptExample({ getData }) {
     "Berikan Ide Cara Menyelesaikan Klimaks Cerita Ini",
   ];
   return (
-    <div className="flex gap-3 flex-wrap">
+    <div className="flex sm:flex-row justify-center gap-3 mx-5 ">
       {promptList.map((prompt, index) => (
         <button
-          className="text-center bg-slate-300 p-2"
+          className="text-center p-4 rounded-lg bg-transparent border-2 border-primary"
           key={index}
           onClick={() => {
             getData(prompt);
