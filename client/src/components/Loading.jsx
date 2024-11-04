@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import cancellogo from "../assets/cancellogo.png";
 
 function Loading(setLoading, setData) {
   const [rotateDiv, setRotateDiv] = useState(false);
@@ -48,18 +47,6 @@ function Loading(setLoading, setData) {
           />
         </svg>
       </motion.div>
-      <button
-        className="bg-[#FFEAD1] p-4 rounded-xl "
-        onClick={() => {
-          setLoading(false);
-          setData("");
-        }}
-      >
-        <span className="flex gap-2">
-          <img src={cancellogo} className="w-[25px]" alt="cancellogo" />
-          <p className="text-primary">Cancel Generate</p>
-        </span>
-      </button>
     </div>
   );
 }
