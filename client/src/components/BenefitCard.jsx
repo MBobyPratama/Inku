@@ -6,39 +6,37 @@ import botbanner from "../assets/botbanner.png";
 export default function BenefitCard() {
   const benefits = [
     { icon: help, text: "Helping to develop your ideas" },
-    { icon: history, text: "Helping to develop your ideas" },
-    { icon: explore, text: "Helping to develop your ideas" },
+    { icon: history, text: "Create enganging stories" },
+    { icon: explore, text: "Help to explore your mind" },
   ];
 
   return (
     <section className="mt-10">
       <div className="flex flex-col items-center justify-center h-screen">
-        <div className="flex flex-col bg-primary rounded-xl gap-2 p-4">
-          <h3 className="text-center text-3xl font-bold text-text">
-            With Inku
-          </h3>
+        <div className="flex flex-col bg-primary rounded-xl gap-2 p-12">
           <div className="flex flex-col sm:flex-row gap-4 items-center">
             <ul className="space-y-2">
+              <h3 className="text-center text-3xl sm:text-5xl mb-10 overflow-clip font-bold text-text">
+                With Inku
+              </h3>
               {benefits.map((benefit, index) => (
                 <li key={index}>
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center mb-2 gap-2">
                     <img
                       src={benefit.icon}
-                      className="h-[25px] w-[25px]"
+                      className="h-[35px] w-[35px]"
                       alt="benefit icon"
                     />
-                    <p>{benefit.text}</p>
+                    <p className="text-text font-medium">{benefit.text}</p>
                   </div>
-                  {index < benefits.length - 1 && <hr className="mt-2" />}
+                  {index < benefits.length - 1 && (
+                    <hr className="border-black" />
+                  )}
                 </li>
               ))}
             </ul>
             <div>
-              <img
-                src={botbanner}
-                className="w-[240px] h-[160px]"
-                alt="bot banner"
-              />
+              <img src={botbanner} className="w-[600px]" alt="bot banner" />
             </div>
           </div>
         </div>

@@ -4,15 +4,16 @@ import LoginCard from "../components/LoginCard";
 import BenefitCard from "../components/BenefitCard";
 import Background from "../assets/background.jpg";
 import Footer from "../components/footer";
+import Signup from "../components/signup";
+import { useState } from "react";
 export default function LandingPage() {
+  const [login, setLogin] = useState(true);
   return (
-    <div>
+    <div style={{ backgroundImage: `url(${Background})` }}>
       <NavBar />
       <Banner />
-      <LoginCard />
       <BenefitCard />
       <Footer />
-      <img src={Background} className="absolute -z-10 top-0 img-cover" />
     </div>
   );
 }

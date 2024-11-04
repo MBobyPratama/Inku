@@ -2,7 +2,7 @@ import password from "../assets/password.png";
 import user from "../assets/user.png";
 import bar from "../assets/bar.png";
 
-export default function LoginCard({ setLogin }) {
+export default function Signup() {
   return (
     <section id="login">
       <div className="flex justify-center mt-4 items-center h-screen">
@@ -13,6 +13,7 @@ export default function LoginCard({ setLogin }) {
           </h2>
           <span className="flex items-center gap-1 bg-secondary p-2 rounded mt-4 drop-shadow-xl">
             <img src={user} className="w-[25px] h-[25px]" alt="" />
+            <img src="" alt="" />
             <input
               type="text"
               placeholder="Username"
@@ -35,7 +36,6 @@ export default function LoginCard({ setLogin }) {
             Login
           </button>
         </div>
-        <button onClick={() => setLogin(false)}>Sign Up</button>
       </div>
     </section>
   );

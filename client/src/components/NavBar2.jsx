@@ -17,11 +17,6 @@ export default function Navbar2() {
             <li>
               <a href="">About Us</a>
             </li>
-            <li className="bg-secondary rounded-xl">
-              <a href="" className="text-orange-500">
-                Login
-              </a>
-            </li>
           </div>
         </div>
       </ul>

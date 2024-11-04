@@ -5,19 +5,20 @@ export default function Navbar() {
   return (
     <nav>
       <ul className="flex flex-col items-center mt-4">
-        <div className="flex gap-16 mt-6">
+        <div className="flex gap-5 sm:gap-24 mt-6">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" className=" text-[12px] sm:text-xl">
+              Home
+            </Link>
           </li>
           <li>
-            <a href="">Help & Support</a>
+            <a href="" className=" text-[12px] sm:text-xl">
+              Help & Support
+            </a>
           </li>
           <li>
-            <a href="">About Us</a>
-          </li>
-          <li className="bg-secondary rounded-xl">
-            <a href="" className="text-orange-500">
-              Login
+            <a href="" className=" text-[12px] sm:text-xl">
+              About Us
             </a>
           </li>
         </div>
