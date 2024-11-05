@@ -13,6 +13,7 @@ export default function Chats() {
   const [loading, setLoading] = useState(false);
   const listRef = useRef(null);
   const [isPrompt, setIsPrompt] = useState(false);
+  const apiUrl = process.env.API_URL || "http://localhost:3000";
 
   useEffect(() => {
     if (listRef.current) {
@@ -31,7 +32,7 @@ export default function Chats() {
       setInputData((prev) => [...prev, userPrompt]);
       setIsPrompt(true);
 
-      const res = await fetch("/generate", {
+      const res = await fetch("${apiUrl}/generate", {
         method: "POST",
         body: JSON.stringify({ prompt: userPrompt }),
         headers: { "Content-Type": "application/json" },
