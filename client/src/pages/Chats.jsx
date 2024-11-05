@@ -1,3 +1,4 @@
+import dotenv from "dotenv";
 import React, { useState, useRef, useEffect } from "react";
 import TextInput from "../components/TextInput";
 import Conversation from "../components/Conversation";
@@ -5,6 +6,8 @@ import PromptExample from "../components/PromptExample";
 import Line from "../assets/Line.png";
 import Navbar2 from "../components/NavBar2";
 import Loading from "../components/Loading";
+
+dotenv.config();
 
 export default function Chats() {
   const [data, setData] = useState([]);
@@ -32,7 +35,7 @@ export default function Chats() {
       setInputData((prev) => [...prev, userPrompt]);
       setIsPrompt(true);
 
-      const res = await fetch(`${apiUrl}`, {
+      const res = await fetch(`${apiUrl}/generate`, {
         method: "POST",
         body: JSON.stringify({ prompt: userPrompt }),
         headers: { "Content-Type": "application/json" },
