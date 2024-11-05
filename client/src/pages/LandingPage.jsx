@@ -1,4 +1,4 @@
-import NavBar from "../components/NavBar";
+import NavBar from "../components/Navbar";
 import Banner from "../components/Banner";
 import LoginCard from "../components/LoginCard";
 import BenefitCard from "../components/BenefitCard";
