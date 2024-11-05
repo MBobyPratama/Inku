@@ -1,4 +1,3 @@
-import dotenv from "dotenv";
 import React, { useState, useRef, useEffect } from "react";
 import TextInput from "../components/TextInput";
 import Conversation from "../components/Conversation";
@@ -7,8 +6,6 @@ import Line from "../assets/Line.png";
 import Navbar2 from "../components/NavBar2";
 import Loading from "../components/Loading";
 
-dotenv.config();
-
 export default function Chats() {
   const [data, setData] = useState([]);
   const [input, setInput] = useState("");
@@ -16,7 +13,6 @@ export default function Chats() {
   const [loading, setLoading] = useState(false);
   const listRef = useRef(null);
   const [isPrompt, setIsPrompt] = useState(false);
-  const apiUrl = process.env.API_URL || "http://localhost:3000";
 
   useEffect(() => {
     if (listRef.current) {
@@ -35,11 +31,14 @@ export default function Chats() {
       setInputData((prev) => [...prev, userPrompt]);
       setIsPrompt(true);
 
-      const res = await fetch(`${apiUrl}/generate`, {
-        method: "POST",
-        body: JSON.stringify({ prompt: userPrompt }),
-        headers: { "Content-Type": "application/json" },
-      });
+      const res = await fetch(
+        `https://inku-api-production.up.railway.app/generate`,
+        {
+          method: "POST",
+          body: JSON.stringify({ prompt: userPrompt }),
+          headers: { "Content-Type": "application/json" },
+        }
+      );
 
       if (!res.ok) {
         throw new Error(`Server error: ${res.status}`);
