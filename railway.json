@@ -1,0 +1,11 @@
+{
+  "build": {
+    "builder": "nixpacks",
+    "nixpacks": {
+      "dir": "server"
+    }
+  },
+  "deploy": {
+    "start": "node server/script.js"
+  }
+}
