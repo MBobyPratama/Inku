@@ -32,7 +32,7 @@ export default function Chats() {
       setInputData((prev) => [...prev, userPrompt]);
       setIsPrompt(true);
 
-      const res = await fetch("${apiUrl}/generate", {
+      const res = await fetch(`${apiUrl}/generate`, {
         method: "POST",
         body: JSON.stringify({ prompt: userPrompt }),
         headers: { "Content-Type": "application/json" },
