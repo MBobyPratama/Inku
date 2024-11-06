@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="client/src/assets/LogoHD.png" alt="logo" width="200" height="auto" />
+  <img src="https://github.com/user-attachments/assets/bb4b5902-c6f1-40d5-937e-6415fd8b4b9e" alt="logo" width="200" height="auto" />
     <h1>Inku</h1>
   <p>
   <a href="https://github.com/SulthanYasinZain/Inku/graphs/contributors">
