@@ -1,71 +1,59 @@
 <div align="center">
-
-  <img src="assets/logo.png" alt="logo" width="200" height="auto" />
-  <h1>Inku</h1>
-  
+  <img src="client/src/assets/LogoHD.png" alt="logo" width="200" height="auto" />
+    <h1>Inku</h1>
   <p>
-    An awesome README template for your projects! 
-  </p>
-  
-  
-<!-- Badges -->
-<p>
-  <a href="https://github.com/Louis3797/awesome-readme-template/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/Louis3797/awesome-readme-template" alt="contributors" />
+  <a href="https://github.com/SulthanYasinZain/Inku/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/SulthanYasinZain/Inku" alt="contributors" />
   </a>
   <a href="">
-    <img src="https://img.shields.io/github/last-commit/Louis3797/awesome-readme-template" alt="last update" />
+    <img src="https://img.shields.io/github/last-commit/SulthanYasinZain/Inku" alt="last update" />
   </a>
-  <a href="https://github.com/Louis3797/awesome-readme-template/network/members">
-    <img src="https://img.shields.io/github/forks/Louis3797/awesome-readme-template" alt="forks" />
+  <a href="https://github.com/SulthanYasinZain/Inku/network/members">
+    <img src="https://img.shields.io/github/forks/SulthanYasinZain/Inku" alt="forks" />
   </a>
-  <a href="https://github.com/Louis3797/awesome-readme-template/stargazers">
-    <img src="https://img.shields.io/github/stars/Louis3797/awesome-readme-template" alt="stars" />
+  <a href="https://github.com/SulthanYasinZain/Inku/stargazers">
+    <img src="https://img.shields.io/github/stars/SulthanYasinZain/Inku" alt="stars" />
   </a>
-  <a href="https://github.com/Louis3797/awesome-readme-template/issues/">
-    <img src="https://img.shields.io/github/issues/Louis3797/awesome-readme-template" alt="open issues" />
-  </a>
-  <a href="https://github.com/Louis3797/awesome-readme-template/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/Louis3797/awesome-readme-template.svg" alt="license" />
+  <a href="https://github.com/SulthanYasinZain/Inku/issues/">
+    <img src="https://img.shields.io/github/issues/SulthanYasinZain/Inku" alt="open issues" />
   </a>
 </p>
-   
-<h4>
 </div>
 
-<br />
+Inku adalah aplikasi kreatif AI yang dirancang untuk memicu inspirasi dan membimbing penulis dalam mengembangkan ide-ide mereka. Aplikasi ini dibangun menggunakan React dan Vite, dan menyediakan antarmuka yang ramah pengguna untuk berinteraksi dengan AI.
 
-<!-- Table of Contents -->
-# :notebook_with_decorative_cover: Table of Contents
+## Table of Contents
 
-- [About the Project](#star2-about-the-project)
-  * [Screenshots](#camera-screenshots)
-  * [Tech Stack](#space_invader-tech-stack)
-  * [Features](#dart-features)
-  * [Color Reference](#art-color-reference)
-  * [Environment Variables](#key-environment-variables)
-- [Run Locally](#running-run-locally)
-- [FAQ](#grey_question-faq)
-- [License](#warning-license)
-- [Contact](#handshake-contact)
-- [Acknowledgements](#gem-acknowledgements)
+- [Fitur](#fitur)
+- [Tautan Penting](#tautan-penting)
+- [Screenshots](#screenshots)
+- [Tech Stack](#tech-stack)
+- [Prasyarat](#prasyarat)
+- [Environment Variables](#environment-variables)
+- [Cara Menjalankan Proyek](#cara-menjalankan-proyek)
+- [Struktur Proyek](#struktur-proyek)
+- [Skrip NPM](#skrip-npm)
+- [Kontribusi](#kontribusi)
 
-  
+## Fitur
 
-<!-- About the Project -->
-## :star2: About the Project
+- *Interaksi AI*: Dapatkan ide dan inspirasi dari AI untuk membantu mengembangkan cerita dan karakter.
+- *Antarmuka Pengguna yang Responsif*: Desain yang responsif dan mudah digunakan.
+- *Integrasi dengan Alat Desain*: Tautan ke desain Figma dan Canva untuk referensi visual.
 
+## Tautan Penting
 
-<!-- Screenshots -->
-### :camera: Screenshots
+- *Preview Deployment*: [Inku di Vercel](https://inku-five.vercel.app/)
+- *Desain Figma*: [Figma Link](https://me-qr.com/Vz1xKdKI)
+- *Desain Canva*: [Canva Link](https://www.canva.com/design/DAGVhgd3STM/rYrr3zMG1eEz7XgIERg66g/edit?utm_content=DAGVhgd3STM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
+## Screenshots
 
 <div align="center"> 
   <img src="https://placehold.co/600x400?text=Your+Screenshot+here" alt="screenshot" />
 </div>
 
-
-<!-- TechStack -->
-### :space_invader: Tech Stack
+## Tech Stack
 
 <details>
   <summary>Client</summary>
@@ -82,101 +70,59 @@
   </ul>
 </details>
 
-<!-- Features -->
-### :dart: Features
+## Prasyarat
 
-- Feature 1
-- Feature 2
-- Feature 3
+Pastikan Anda telah menginstal Node.js dan npm di sistem Anda.
 
-<!-- Color Reference -->
-### :art: Color Reference
+## Environment Variables
 
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| Primary Color | ![#222831](https://via.placeholder.com/10/222831?text=+) #222831 |
-| Secondary Color | ![#393E46](https://via.placeholder.com/10/393E46?text=+) #393E46 |
-| Accent Color | ![#00ADB5](https://via.placeholder.com/10/00ADB5?text=+) #00ADB5 |
-| Text Color | ![#EEEEEE](https://via.placeholder.com/10/EEEEEE?text=+) #EEEEEE |
+Untuk menjalankan proyek ini, Anda perlu menambahkan variabel lingkungan berikut ke file .env Anda.
 
+API_KEY
 
-<!-- Env Variables -->
-### :key: Environment Variables
+## Cara Menjalankan Proyek
 
-To run this project, you will need to add the following environment variables to your .env file
+1. *Clone repositori ini*:
+   bash
+   git clone <https://github.com/SulthanYasinZain/Inku.git>
+   cd <repository-directory>
+   
 
-`API_KEY`
+2. *Instal dependensi*:
+   bash
+   npm install
+   
 
-<!-- Getting Started -->
-<!-- Run Locally -->
-### :running: Run Locally
+3. *Build proyek frontend*:
+   Navigasi ke folder client dan jalankan perintah build:
+   bash
+   cd client
+   npm run build
+   
 
+4. *Jalankan server backend*:
+   Navigasi ke folder server dan jalankan server:
+   bash
+   cd server
+   node script.js
+   
 
-Install dependencies
+5. *Akses aplikasi*:
+   Buka browser Anda dan kunjungi http://localhost:3000 untuk melihat aplikasi berjalan.
 
-```bash
-  npm install express
-```
-```bash
-  npm install -D tailwindcss
-```
-```bash
-  npm install framer-motion
-```
+## Struktur Proyek
 
-Start the server
+- *client*: Berisi kode frontend yang dibangun dengan React.
+- *server*: Berisi kode backend yang menggunakan Express.js.
 
-```bash
-  npm run build
-```
+## Skrip NPM
 
-```bash
-  node server.js
-```
+- npm run dev: Menjalankan server pengembangan.
+- npm run build: Membangun aplikasi untuk produksi.
+- npm run lint: Menjalankan ESLint untuk memeriksa kesalahan kode.
 
-
-<!-- Deployment -->
-### :triangular_flag_on_post: Deployment
-
-To deploy this project run
-
-```bash
-  yarn deploy
-```
-<!-- FAQ -->
-## :grey_question: FAQ
-
-- Question 1
-
-  + Answer 1
-
-- Question 2
-
-  + Answer 2
-
-
-<!-- License -->
-## :warning: License
-
-Distributed under the no License. See LICENSE.txt for more information.
-
-
-<!-- Contact -->
-## :handshake: Contact
+## Kontribusi
 
 Muhammad Sulthan Yasin Zain - [@sulthan.zain](https://Instagram.com/sulthan.zain) <br>
-Muhammad Bobby Pratama - [@sulthan.zain](https://Instagram.com/sulthan.zain) <br>
-Cinta Aulia Ananda Kusuma - [@sulthan.zain](https://Instagram.com/sulthan.zain)
-
-Project Link: [https://github.com/Louis3797/awesome-readme-template](https://github.com/Louis3797/awesome-readme-template)
-
-
-<!-- Acknowledgments -->
-## :gem: Acknowledgements
-
-Use this section to mention useful resources and libraries that you have used in your projects.
-
- - [ChatGPT](https://chatgpt.com/)
- - [Gemini API](https://ai.google.dev/)
- - [Emoji Cheat Sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md#travel--places)
- - [Readme Template](https://github.com/othneildrew/Best-README-Template)
+Muhammad Bobby Pratama - [@3bobyy](https://Instagram.com/3bobyy) <br>
+Cinta Aulia Ananda Kusuma - [@cintauliyaa_](https://Instagram.com/cintauliyaa_)
