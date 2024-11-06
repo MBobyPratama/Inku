@@ -5,8 +5,8 @@ export default function Navbar2() {
   return (
     <nav className="overflow-clip">
       <ul className="flex flex-col items-center mt-4 mr-4">
-        <div className="flex flex-col sm:flex-row items-center gap-14 sm:gap-24 mt-6">
-          <img src={Logo} className="w-[150px] absolute left-20" />
+        <div className="flex flex-col sm:flex-row items-center  sm:gap-24 mt-6">
+          <img src={Logo} className="w-[150px] sm:absolute sm:left-20" />
           <div className="flex gap-12 sm:gap-24">
             <li>
               <Link className="text-[12px] sm:text-xl" to="/">

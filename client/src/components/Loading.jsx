@@ -1,8 +1,17 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Logo from "../assets/Logo.png";
 
-function Loading(setLoading, setData) {
+function Loading() {
   const [rotateDiv, setRotateDiv] = useState(false);
+  const [dots, setDots] = useState("");
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDots((prev) => (prev === "..." ? "" : prev + "."));
+    }, 500);
+    return () => clearInterval(interval);
+  }, []);
 
   const pathVariants = {
     hidden: { pathLength: 0 },
@@ -14,9 +23,14 @@ function Loading(setLoading, setData) {
   };
 
   return (
-    <div className=" bg-white absolute flex flex-col justify-between p-14 items-center  w-screen h-screen">
-      <h1 className="text-text text-4xl overflow-clip">
-        Generating Your Request...
+    <div className="bg-white absolute flex flex-col justify-between p-14 items-center w-screen h-screen">
+      <img
+        src={Logo}
+        className="w-[100px] absolute mb- sm:top-10 sm:left-10"
+        alt="Logo"
+      />
+      <h1 className="text-text text-xl mt-12 sm:mt-0 w sm:text-4xl overflow-clip">
+        Generating Your Request{dots}
       </h1>
       <motion.div
         className="mt-24 absolute bg-white px-10 pb-14 flex justify-center"
