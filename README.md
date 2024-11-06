@@ -50,7 +50,7 @@ Inku adalah aplikasi kreatif AI yang dirancang untuk memicu inspirasi dan membim
 ## Screenshots
 
 <div align="center"> 
-  <img src="https://placehold.co/600x400?text=Your+Screenshot+here" alt="screenshot" />
+  <img src="https://github.com/user-attachments/assets/ecd97384-184b-4832-a25a-279e0ee3bd26" alt="screenshot" />
 </div>
 
 ## Tech Stack
