@@ -37,15 +37,15 @@ Inku adalah aplikasi kreatif AI yang dirancang untuk memicu inspirasi dan membim
 
 ## Fitur
 
-- *Interaksi AI*: Dapatkan ide dan inspirasi dari AI untuk membantu mengembangkan cerita dan karakter.
-- *Antarmuka Pengguna yang Responsif*: Desain yang responsif dan mudah digunakan.
-- *Integrasi dengan Alat Desain*: Tautan ke desain Figma dan Canva untuk referensi visual.
+- **Interaksi AI**: Dapatkan ide dan inspirasi dari AI untuk membantu mengembangkan cerita dan karakter.
+- **Antarmuka Pengguna yang Responsif**: Desain yang responsif dan mudah digunakan.
+- **Integrasi dengan Alat Desain**: Tautan ke desain Figma dan Canva untuk referensi visual.
 
 ## Tautan Penting
 
-- *Preview Deployment*: [Inku di Vercel](https://inku-five.vercel.app/)
-- *Desain Figma*: [Figma Link](https://me-qr.com/Vz1xKdKI)
-- *Desain Canva*: [Canva Link](https://www.canva.com/design/DAGVhgd3STM/rYrr3zMG1eEz7XgIERg66g/edit?utm_content=DAGVhgd3STM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+- **Preview Deployment**: [Inku di Vercel](https://inku-five.vercel.app/)
+- **Desain Figma**: [Figma Link](https://me-qr.com/Vz1xKdKI)
+- **Desain Canva**: [Canva Link](https://www.canva.com/design/DAGVhgd3STM/rYrr3zMG1eEz7XgIERg66g/edit?utm_content=DAGVhgd3STM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ## Screenshots
 
@@ -76,53 +76,53 @@ Pastikan Anda telah menginstal Node.js dan npm di sistem Anda.
 
 ## Environment Variables
 
-Untuk menjalankan proyek ini, Anda perlu menambahkan variabel lingkungan berikut ke file .env Anda.
+Untuk menjalankan proyek ini, Anda perlu menambahkan variabel lingkungan berikut ke file `.env` Anda.
 
-API_KEY
+`API_KEY`
 
 ## Cara Menjalankan Proyek
 
-1. *Clone repositori ini*:
-   bash
+1. **Clone repositori ini**:
+   ```bash
    git clone <https://github.com/SulthanYasinZain/Inku.git>
    cd <repository-directory>
-   
+   ```
 
-2. *Instal dependensi*:
-   bash
+2. **Instal dependensi**:
+   ```bash
    npm install
-   
+   ```
 
-3. *Build proyek frontend*:
-   Navigasi ke folder client dan jalankan perintah build:
-   bash
+3. **Build proyek frontend**:
+   Navigasi ke folder `client` dan jalankan perintah build:
+   ```bash
    cd client
    npm run build
-   
+   ```
 
-4. *Jalankan server backend*:
-   Navigasi ke folder server dan jalankan server:
-   bash
+4. **Jalankan server backend**:
+   Navigasi ke folder `server` dan jalankan server:
+   ```bash
    cd server
    node script.js
-   
+   ```
 
-5. *Akses aplikasi*:
-   Buka browser Anda dan kunjungi http://localhost:3000 untuk melihat aplikasi berjalan.
+5. **Akses aplikasi**:
+   Buka browser Anda dan kunjungi `http://localhost:3000` untuk melihat aplikasi berjalan.
 
 ## Struktur Proyek
 
-- *client*: Berisi kode frontend yang dibangun dengan React.
-- *server*: Berisi kode backend yang menggunakan Express.js.
+- **client**: Berisi kode frontend yang dibangun dengan React.
+- **server**: Berisi kode backend yang menggunakan Express.js.
 
 ## Skrip NPM
 
-- npm run dev: Menjalankan server pengembangan.
-- npm run build: Membangun aplikasi untuk produksi.
-- npm run lint: Menjalankan ESLint untuk memeriksa kesalahan kode.
+- `npm run dev`: Menjalankan server pengembangan.
+- `npm run build`: Membangun aplikasi untuk produksi.
+- `npm run lint`: Menjalankan ESLint untuk memeriksa kesalahan kode.
 
 ## Kontribusi
 
 Muhammad Sulthan Yasin Zain - [@sulthan.zain](https://Instagram.com/sulthan.zain) <br>
-Muhammad Bobby Pratama - [@3bobyy](https://Instagram.com/3bobyy) <br>
-Cinta Aulia Ananda Kusuma - [@cintauliyaa_](https://Instagram.com/cintauliyaa_)
+Muhammad Boby Pratama - [@3bobyy](https://Instagram.com/3bobyy) <br>
+Cinta Auliya Kusuma Ananda  - [@cintauliyaa_](https://Instagram.com/cintauliyaa_)
