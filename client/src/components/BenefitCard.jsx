@@ -11,7 +11,7 @@ export default function BenefitCard() {
   ];
 
   return (
-    <section id="about" className="mt-10">
+    <section id="about" className=" mx-2 sm:mx-0 mt-10">
       <div className="flex flex-col items-center justify-center h-screen">
         <div className="flex flex-col bg-primary rounded-xl gap-2 p-12">
           <div className="flex flex-col sm:flex-row gap-4 items-center">

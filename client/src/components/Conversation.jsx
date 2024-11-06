@@ -4,10 +4,10 @@ import conversationbg from "../assets/conversationbg.png";
 export default function Conversation({ listRef, data = [], input = [] }) {
   return (
     <section
-      className="flex justify-center  w-screen mt-12 "
+      className="flex justify-center h-full  w-screen mt-12 "
       style={{ backgroundImage: `url(${conversationbg})` }}
     >
-      <div className="flex flex-row justify-between sm:w-screen mx-6  h-screen gap-12  mt-12 sm:ml-20">
+      <div className="flex flex-row justify-between sm:w-screen mx-6 pb-10  h-screen gap-12  mt-12 sm:ml-20">
         <div className="rounded w-full h-fit mt-10">
           <div className=" w-fit"></div>
           <ul>
