@@ -22,7 +22,7 @@
 
 Inku adalah aplikasi kreatif AI yang dirancang untuk memicu inspirasi dan membimbing penulis dalam mengembangkan ide-ide mereka. Aplikasi ini dibangun menggunakan React dan Vite, dan menyediakan antarmuka yang ramah pengguna untuk berinteraksi dengan AI.
 
-## Table of Contents
+## ☺ Table of Contents
 
 - [Fitur](#fitur)
 - [Tautan Penting](#tautan-penting)
